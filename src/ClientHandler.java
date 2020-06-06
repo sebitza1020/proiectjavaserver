@@ -24,7 +24,7 @@ public class ClientHandler extends Thread{
             try {
                 output.writeUTF("");
                 String received = input.readUTF();
-                if (received.equals("Done") || this.con.isClosed()) {
+                if (received.equals("Done")) {
                     this.socket.close();
                     System.out.println("Connection terminated");
                     break;
